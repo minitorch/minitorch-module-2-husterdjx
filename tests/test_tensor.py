@@ -63,10 +63,10 @@ def test_one_derivative(
 def test_permute(data: DataObject, t1: Tensor) -> None:
     "Test the permute function"
     permutation = data.draw(permutations(range(len(t1.shape))))
-
+    print("tensor.shape: ", t1.shape, "permutation: ", permutation)
     def permute(a: Tensor) -> Tensor:
         return a.permute(*permutation)
-
+    
     grad_check(permute, t1)
 
 

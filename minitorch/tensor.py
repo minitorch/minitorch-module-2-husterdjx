@@ -211,7 +211,7 @@ class Tensor:
         if dim is None:
             return Sum.apply(self.contiguous().view(self.size), self._ensure_tensor(0))
         else:
-            return Sum.apply(self, self._ensure_tensor(dim))
+            return Sum.apply(self, self._ensure_tensor(dim)) # for tensor type correction
 
     def mean(self, dim: Optional[int] = None) -> Tensor:
         "Compute the mean over dimension `dim`"
