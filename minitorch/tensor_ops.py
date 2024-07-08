@@ -149,7 +149,7 @@ class SimpleOps(TensorOps):
 
             for i:
                 for j:
-                    out[i, j] = fn(a[i, j], b[i, j])
+                    out[i, j] = fn(a[i, j], b[i, j]) # 1对1
 
         Broadcasted version (`a` and `b` might be smaller than `out`) ::
 

@@ -83,7 +83,7 @@ class Scalar:
         return "Scalar(%f)" % self.data
 
     def __mul__(self, b: ScalarLike) -> Scalar:
-        return Mul.apply(self, b)
+        return Mul.apply(self, b) # a + b
 
     def __truediv__(self, b: ScalarLike) -> Scalar:
         return Mul.apply(self, Inv.apply(b))
